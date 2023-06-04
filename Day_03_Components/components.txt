@@ -1,0 +1,90 @@
+Components
+A React component is a small, reusable code, which is responsible for one part of the 
+application UI. A React application is an aggregation of components. React can help us 
+to build reusable components. In React we assemble different components 
+together to create an application. We use JavaScript functions or classes to make components. 
+If we use a function, the component will be a functional component, but if we use a class, 
+the component will be a class-based component.
+
+Big picture of components
+ If we have a million-dollar button, we can use this button all the time, instead of
+  recreating it all over again, whenever we need a button. The same goes for input fields, 
+  forms, header or footer. That is where the power of the component comes. 
+
+
+React Functional Components
+Using a JavaScript function, we can make a functional React component.
+
+// React component syntax
+// it can be arrow function, function declaration or function expression
+const jsx = <tag> Content </tag>
+const ComponentName = () => {
+  return jsx
+}
+
+The following expression is a JSX element.
+
+// JSX element, header
+const header = (
+  <header style={headerStyles}>
+    <div className='header-wrapper'>
+      <h1>Welcome to 30 Days Of React</h1>
+      <h2>Getting Started React</h2>
+      <h3>JavaScript Library</h3>
+      <p>Asabeneh Yetayeh</p>
+      <small>Oct 3, 2020</small>
+    </div>
+  </header>
+)
+
+// React Component
+const Header = () => {
+  return header
+}
+
+or
+
+// Explicitly returning the JSX
+const Header = () => (
+  <header style={headerStyles}>
+    <div className='header-wrapper'>
+      <h1>Welcome to 30 Days Of React</h1>
+      <h2>Getting Started React</h2>
+      <h3>JavaScript Library</h3>
+      <p>Asabeneh Yetayeh</p>
+      <small>Oct 3, 2020</small>
+    </div>
+  </header>
+)
+
+Rendering components
+
+Convert the Jsx to React Component
+
+Further on Functional components
+What is the smallest size of a component? A component that returns only a single HTML as 
+JSX is considered as a small component. A button component or an alert box component, or 
+just an input field component.
+
+const Button = () => <button>action</button>
+const buttonStyles = {
+  padding: '10px 20px',
+  background: 'rgb(0, 255, 0'),
+  border: 'none',
+  borderRadius: 5,
+}
+const Button = () => <button style={buttonStyles}> action </button>
+
+The Button component is a dumb component, because it does not take any parameters and we 
+cannot change the action text dynamically. We need to pass props to the button, to change 
+the value dynamically. 
+
+
+Exercise:
+What is a React Component?
+How do you make a React functional component?
+What is the difference between a pure JavaScript function and a functional component?
+How small is a React component?
+Can we make a button or input field component?
+Make a reusable Button component.
+Make a reusable InputField component.
