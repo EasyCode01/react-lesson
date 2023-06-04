@@ -1,0 +1,55 @@
+What is props?
+Props is a special keyword in React that stands for properties and is being used to pass 
+data from one component to another and mostly from parent component to child component. 
+We can say props is a data carrier or a means to transport data.
+Most of the time, functions with parameters are smart and they can take dynamic data 
+likewise props is a way we pass data or parameter to a component.
+
+const User = (props) => {
+  return (
+    <div>
+      <h1>
+        {props.firstName}
+        {props.lastName}
+      </h1>
+      <small>{props.country}</small>
+    </div>
+  )
+}
+<User firstName = 'Asabeneh', lastName='Yetayeh' country = 'Finland' />
+
+Props object
+React props is an object which you get instantly when you create a React component. 
+Before we pass properties to the component, let's check what do we get in the props object.
+
+In the above console.log(props), you would get an empty object({}). 
+That means if you do not pass any attributes or properties when you instantiate the component, 
+the props will be empty otherwise it will be populated with the data you passed as attributes 
+and the proper name of these attributes are props.
+
+exercise:
+1. Create a header component that accepts a welcome prop with a message 'Welcome to react class'
+2. Try it with different data types
+3. Simple calculations
+
+
+Objects props type
+Exercise two:
+1. In the App component create a data object
+with properties:welcome, title, subtitle, nested object author:firstname, lastname, date:date object
+
+2. render a child component to accept that data as prop
+3. In the child component use the prop to display the data.
+4. create a function in the child component that accepts a parameter date.
+and returns month day and year
+
+
+Function props type
+Use a button 
+
+Destructuring props
+({
+    data:{
+        
+    }
+})
