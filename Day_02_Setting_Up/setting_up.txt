@@ -1,0 +1,62 @@
+Setting Up
+
+In the previous section, we learned about JSX and we accessed the React and ReactDOM 
+package using CDN. However, in real projects instead of CDN you will use a build tool.
+
+We will be using vite.
+
+let's have a brief introduction to all the tools we are going to use in this lesson. 
+You do not have to understand everything, but I will try to give a very short introduction 
+to some of the tools and technologies that we use when we work with React.
+
+1. Node
+Node is a JavaScript runtime environment that allows JavaScript to run on the server. 
+Node was created in 2009. Node has played a great role for the growth of JavaScript.
+
+we need to install node.
+confirm node.
+
+
+2. Module
+A single or multiple functions, that can be exported and imported when needed, 
+can be included in a project. In React we do not use link to access modules or packages, 
+instead we import the module. Let's see how to import and export a module or modules:
+
+After this, when you see import React from 'react' or import ReactDOM from 'react-dom' 
+you will not be surprised.
+
+3. Package
+A Package is a module or a collection of modules. For instance, React, ReactDOM are packages.
+
+Node Package Manager(NPM)
+NPM was created in 2010. You do not need to install NPM separately - when you install 
+node you will have also NPM. NPM is a default package manager for Node.js. It allows 
+users to consume and distribute JavaScript modules that are available in the registry. 
+NPM allows to create packages, use packages and distribute packages. NMP also played quite 
+a big role in the growth of JavaScript. Currently, there is more than a million packages in 
+the NPM registry. Let's see the create-react-app on NPM registry. The number of downloads 
+show the popularity of the package.
+
+i. It allows us manage dependencies and packages for JavaScript project
+
+4. vite
+"Very Fast in-browser dev server and build tool" and is primarily used for modern web development.
+
+intall vite
+ npm create vite@latest .
+
+ 5. Visual Studio Extensions
+You may need to install these extensions from Visual Studio Code
+
+Prettier 
+ESLint
+Bracket Pair Colorizer
+ES7 React/Redux/GraphQL/React-Native snippets
+
+
+Add JSX
+Styles in JSX
+Inject data to jsx elements
+import images
+
+Assignment Design 
