@@ -1,0 +1,148 @@
+1. What is React?
+React is a JavaScript library for building a reusable user interface(UI). 
+It was initially released on May 29, 2013.The current version is 18 and somehow stable.
+React was created by Facebook. React makes creating UI components very easy.
+
+When we work with React we do not interact directly with the DOM. React has its own way to 
+handle the DOM(Document Object Model) manipulation. React uses its virtual DOM to make new 
+changes and it updates only the element, that needs changing. Do not directly interact with 
+DOM when you build a React Application and leave the DOM manipulation job for the React virtual 
+DOM. 
+
+
+To summarize:
+
+React was released in May 2013
+React was created by Facebook
+React is a JavaScript library for building user interfaces
+React is used to build single page applications - An application which has only one HTML page.
+React allows us to create reusable UI components
+
+
+2. JSX
+JSX stands for JavaScript XML. JSX allows us to write HTML elements with JavaScript code. 
+To create HTML elements in React we do not use the createElement() instead we just use 
+JSX elements. Therefore, JSX makes it easier to write and add HTML elements in React. 
+JSX will be converted to JavaScript on browser using a transpiler - babel.js. Babel is a 
+library which transpiles JSX to pure JavaScript and latest JavaScript to older version. 
+See the JSX code below.
+
+// JSX syntax
+// we don't need to use quotes with JSX
+
+const jsxElement = <h1>I am a JSX element</h1>
+const welcome = <h1>Welcome to 30 Days of React Challenge</h1>
+const data = <small>Oct 2, 2020</small>
+
+JSX Element
+As you have seen in the example above, JSX has a JavaScript and HTML like syntax. JSX element 
+could be a single HTML element or many HTML elements wrapped in a parent HTML element.
+
+This JSX element has only one HTML element which is h1.
+
+const jsxElement = <h1>I am a JSX element</h1> // JS with HTML
+
+const header = (
+  <header>
+    <h1>Welcome to 30 Days Of React</h1>
+    <h2>Getting Started React</h2>
+    <h3>JavaScript Library</h3>
+  </header>
+)
+
+
+Rendering a JSX Element
+To render a JSX element to HTML document, we should first create an index HTML. 
+The index.html is the only HTML file you will have in any React Application. 
+That is why we say that every React Application is a single page application. 
+Let us create an index.html file. We can get started with React in two ways - either 
+by using CDN or create-react-app or create vite@latest. The create-react-app creates a React project boilerplate 
+outbox and because of that, many people do have a hard time to understand how React works. 
+In order to make things clear for us I would like to start with a CDN. 
+We use CDN only in this section and we will use the create-reap-app in the rest of the 
+challenge and I also recommend you to use only create-react-app all the time.
+
+
+The root div is the gateway to connect all react components to the index.html. 
+In the script tag we will write our JavaScript, but the script type will be babel. 
+Babel will transpile the react JSX to pure JavaScript on the browser. 
+Let us add babel to the script. Inside the babel, we can write any pure JavaScript, 
+JSX and in general any React code.
+
+
+The babel library is linked to our document and now we can make use of it. 
+The next step is importing React and ReactDOM using CDN or link. In order to link 
+React and ReactDOM, we attach both packages from CDN to the body of index.html. 
+To test if React is linked to the index.html, try to check it by doing console.log(React). 
+Open the browser console and you should get an object. If you see an object containing React 
+methods then you managed to link your project with React CDN and you are ready to use React.
+
+
+Now the index.html has everything we need to write React code. Let us get the root element 
+using document.querySelect('.root') and assign it to a variable name rootElement. The is the
+ only place we directly interact with DOM.
+
+Now, you knew JSX and JSX element. Let us render the JSX element on the browser, 
+in order to do so we need the React and ReactDOM library. In addition to the React a
+nd ReactDOM we need babel to transpile the JSX to JavaScript code. The ReactDOM package 
+has a method render. The render method takes two arguments:a JSX element or a component 
+and the root document. See the code below.
+
+ // To get the root element from the HTML document
+      const rootElement = document.querySelector('.root')
+
+      // JSX element
+      const jsxElement = <h1>I am a JSX element</h1>
+
+      // we render the JSX element using the ReactDOM package
+      // ReactDOM has the render method and the render method takes two arguments
+      ReactDOM.render(jsxElement, rootElement)
+
+
+      Exercise:
+      1. Create a JSX Elemnt for the main and the footer
+      2. We have 3 JSX, now we need to render it.
+
+      Let us apply some style to our JSX elements and see the result.
+
+      Style and className in JSX
+      So far, we did not apply any style in the JSX elements. Now, let us add style to our JSX elements. Inline style became very popular after the emergence of react. Let us add border to the header JSX element.
+
+To add style to a JSX element we use inline style or className. We inject the style 
+object using {}. Every CSS property becomes a key and every CSS property value becomes
+ a value for the the object. For instance, in the example below, border is a key 
+ and '2px solid orange' is a value, color is a key and 'black' is a value, 
+ fontSize is a key and '18px' is a value. All two word CSS properties will change to
+  camelCase when we use them as key in the CSS object in React or JavaScript.
+
+
+
+Injecting data to a JSX Element
+So far, we used static data on the JSX elements, but we can also pass different data 
+types as a dynamic data. The dynamic data could be string, number, boolean, array or object.
+Let us see each of the data types step by step. To inject data to a JSX we use the {} bracket.
+
+
+
+Assignment:
+What is JSX?
+What is babel?
+What is a transpiler?
+
+Exercises: JSX Elements
+1. What is a JSX element?
+2. Write your name in a JSX element and store it in a name variable
+3. Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+4. Write a footer JSX element
+
+Exercises: Inline Style
+Create a style object for the main JSX
+Create a style object for the footer and app JSX
+Add more styles to the JSX elements
+
+Exercises: Internal Styles
+Apply different styles to your JSX elements
+
+Exercise: Inject data to JSX
+Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object)
+

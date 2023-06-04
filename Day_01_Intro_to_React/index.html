@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React lesson</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        
+        .input:focus{
+            width:50%;
+        }
+    </style>
+</head>
+<body>
+   <div id="root"></div> 
+
+   <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <script type="text/babel">
+      
+      const rootElement = document.getElementById('root');
+
+
+      const title = 'I am a jsx Element';
+      const numOne = 10;
+      const numTwo = 20;
+
+      const header = (
+        <header style={{border:'2px solid red', backgroundColor:'#014246', color:'#fff'}}>
+            <h1> {title} </h1>
+            <h2> Getting started with react </h2>
+            <h3>{numOne} + {numTwo} = {numOne + numTwo}</h3>
+        </header>
+      );
+
+      const techs = ['HTML', 'CSS', 'JavaScript'];
+      const formattedTechs = techs.map( tech => <li key={tech}>{tech}</li>)
+
+      const mainStyles = {border:'2px solid blue'}
+
+      const main = (
+        <div className="main" style={mainStyles}>
+            <h2> Main Title </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, est.</p>
+            <div className="main__body">
+                <label htmlFor="username">Username</label>
+                <input className='input' id='username' type='text' />
+            </div>
+            <ul>
+                { formattedTechs }
+            </ul>
+        </div>
+
+      )
+
+      const footer = (
+        <div className="footer">
+            <p>footer section</p>
+        </div>
+      )
+
+      const app = (
+        <div class="app">
+            {header}
+            {main}
+            {footer}
+        </div>
+      )
+
+
+      ReactDOM.render(app, rootElement);
+   </script>
+</body>
+</html>
