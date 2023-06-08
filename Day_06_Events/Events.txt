@@ -1,0 +1,6 @@
+Events in React
+
+the event : onClick, onChange
+a simple function //
+function with an argument.
+function taking the event object.
