@@ -24,3 +24,22 @@ The key should be unique. Mostly data will come with as an id and we can use id 
 If we do not pass key to React during mapping it raises a warning on the browser. 
 If the data does not have an id we have to find a way to create a unique identifier 
 for each element when we map it. See the following example:
+
+
+Exercise:
+1. Create the following hexadecimal colors using React component
+2. 1.Make the following bar group using the given data
+
+export const tenHighestPopulation = [
+  { country: 'World', population: 7693165599 },
+  { country: 'China', population: 1377422166 },
+  { country: 'India', population: 1295210000 },
+  { country: 'United States of America', population: 323947000 },
+  { country: 'Indonesia', population: 258705000 },
+  { country: 'Brazil', population: 206135893 },
+  { country: 'Pakistan', population: 194125062 },
+  { country: 'Nigeria', population: 186988000 },
+  { country: 'Bangladesh', population: 161006790 },
+  { country: 'Russian Federation', population: 146599183 },
+  { country: 'Japan', population: 126960000 },
+]
