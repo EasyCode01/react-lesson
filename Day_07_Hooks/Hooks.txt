@@ -1,0 +1,77 @@
+Hooks
+They let you use state and other React features 
+
+1.) useState Hook
+2.) useEffect Hook
+3.) Context API
+
+
+// Emphasis State.
+
+1. useState Hook:
+1) simulate a function that changes the it's value
+2) Why is it not changing ? It is not reactive (react is nit watching it for changes);
+
+Exercise:
+set a random number
+useState with previous state(increase, decrease, reset )
+increase count by 5;
+
+Exercise
+1. useState with Objects
+2. object properties on an input field
+
+
+Exercise two:
+1. a state to hold an array of Objects(songs:{title})
+render a list of song . (spread operator, random: id) ,
+
+Note: we can use the useState hook as many times as we want
+
+
+// Conditional rendering;
+
+
+
+
+
+2. useEffect Hook
+ it's a function that runs every time the component renders or re-renders(i.e everytime the
+ data inside our component changes); 
+ typically you could use it to communicate with an API
+ or even the local storage.
+
+ It's a function that takes two arguments(a callback function, and a dependency array)
+
+
+ example:
+ creae a button that changes a state
+ log a message to the console inside the useEffect function;
+ create another button that changes the state of another variable.
+
+ Imagine we only want it to run every time the first state changes not the second one.
+
+ Explain the dependency array;
+
+ clean up function 
+  a cleanup function is used to perform necessary clean-up operations when a component is unmounted
+   or updated. It helps to free up resources, cancel ongoing processes, or unsubscribe from subscriptions 
+   to prevent memory leaks and ensure the component behaves correctly.
+
+ Note: we can use the useEffect hook as many times as we want inside the component
+
+
+ Rules For Hooks
+
+ 1. Only Call Hooks at the Top Level: dont call hooks inside loops, conditions, or nested functions
+
+
+
+
+3. Context API and Hooks
+eliminates the need of passing data down to a component through components that do not need the data
+
+1. create a new folder 'Context'
+2. create a new file ThemeContext;
+3. import { createContext } from react
+4. assign it to a Context Variable 

@@ -1,0 +1,21 @@
+useRef
+ we will use the useRef hooks to get input data or to access any DOM element in your React application.
+
+useRef can hold a reference to a dom node using the ref attraibute
+it can also be used to store inimmutable value
+current is something react does
+react will set the refs current property to the corresponding dom node
+
+example
+const inputRef = useRef(null);
+
+useEffect(()=>{
+    inputRef.current.focus()
+},[])
+
+<input
+ref{inputRef}
+./>
+
+example 2: setInterval 
+cleanup function will be called when the component unmount

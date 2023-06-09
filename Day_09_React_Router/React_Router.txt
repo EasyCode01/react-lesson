@@ -1,0 +1,34 @@
+React Router
+he literal meaning of route is a path or a way to get to somewhere. The meaning in React is also 
+similar to the literal meaning. React Router is by itself a React component which allows you to 
+navigate between React components.
+
+As we have cleared out the very beginning that React is a single page application which has only one
+ index.html page in the entire application. When we implement a React Router the different components 
+ get render on the index.html page at same time or different time base on different logic and conditions.
+  React Router has different versions and the latest version is React Router 6.
+
+  BroswerRouter
+BrowerRouter is a parent component which allows to wrap the application route. Using the BrowserRouter 
+we can access the browser history. Sometimes it can renames as router. 
+
+Routes
+The Routes component allows only on component to be rendered.
+
+Route(exact)
+The Route component allows to navigate between components. It is a pathway from one component to another. 
+The Route component has two required props: the path and component or render. The path props is where 
+the component has to be rendered and the component props is the component which has to be rendered in 
+that specific path. 
+
+/*
+
+// dynamic Routes: use params
+
+
+useNavigate
+
+
+
+
+
